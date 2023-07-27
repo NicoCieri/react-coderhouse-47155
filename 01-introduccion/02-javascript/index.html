@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Componente con Javascript</title>
+  </head>
+  <body>
+    
+    <div id="app">
+      <!-- <div id="profile">
+        <h2 class="userName">Juan</h2>
+        <p class="userDescription">Desarrollador Front End con 4 años de experiencia</p>
+      </div> -->
+    </div>
+
+
+    <script>
+      const userData = {
+        name: "Pedro",
+        description: "Desarrollador Front End con 4 años de experiencia"
+      }
+
+      function createProfileComponent(user) {
+        
+        // crear elementos del DOM
+        const divProfile = document.createElement("div")
+        const h2Profile = document.createElement("h2")
+        const pDescription = document.createElement("p")
+        
+        // Asignarle las clases
+        h2Profile.className = "userName"
+        pDescription.className = "userDescription"
+        
+        // Asignar valores de usuario
+        h2Profile.textContent = user.name
+        pDescription.textContent = user.description
+        
+        // Anexar elementos al div principal
+        divProfile.appendChild(h2Profile)
+        divProfile.appendChild(pDescription)
+        
+        return divProfile
+      }
+
+      const container = document.getElementById("app")
+      const componenteProfile = createProfileComponent(userData)
+
+      container.appendChild(componenteProfile)
+
+      createProfileComponent()
+    </script>
+  </body>
+</html>

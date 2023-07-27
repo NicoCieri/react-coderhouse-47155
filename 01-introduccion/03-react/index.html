@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Componente con Javascript</title>
+  </head>
+  <body>
+    
+    <div id="app">
+      <!-- <div id="profile">
+        <h2 class="userName">Juan</h2>
+        <p class="userDescription">Desarrollador Front End con 4 años de experiencia</p>
+      </div> -->
+    </div>
+
+    <!-- React -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    
+    <script>
+      const userData = {
+        name: "Pedro",
+        description: "Desarrollador Front End con 4 años de experiencia"
+      }
+
+      function createProfile(user) {
+        const container = document.getElementById("app")
+        
+        const profileComponent = React.createElement(
+          'div',
+          { className: 'container' },
+          [
+            React.createElement('h2', { className: 'userName' }, 
+              React.createElement('span', {}, user.name)
+            ),
+            React.createElement('p', { className: 'userDescription' }, user.description)
+          ]
+        )
+        
+      ReactDOM.render(profileComponent, container)
+    }
+
+    createProfile(userData)
+  </script>
+</body>
+</html>
