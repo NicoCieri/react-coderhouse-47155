@@ -20,7 +20,7 @@ const BackgroundChanger = () => {
     console.log(`El color cambió a ${color}`);
   }, [color]);
 
-  // Se ejecuta en cada renderizado
+  // Se ejecuta después de cada renderizado
   useEffect(() => {
     console.log("El componente se renderizó");
   });
