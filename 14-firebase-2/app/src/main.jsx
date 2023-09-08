@@ -14,6 +14,8 @@ const firebaseConfig = {
   appId: import.meta.env.VITE_FIRESTORE_APP_ID,
 };
 
+// process.env.REACT_APP_FIREBASE_API_KEY,
+
 initializeApp(firebaseConfig);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
