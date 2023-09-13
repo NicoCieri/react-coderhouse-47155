@@ -1,0 +1,9 @@
+.formControl {
+  display: flex;
+  margin-bottom: 8px;
+}
+
+.label {
+  width: 100px;
+  margin-right: 4px;
+}
