@@ -1,6 +1,6 @@
 // Inicio del código
 import "./style.css";
-import React, { useState } from "react";
+import { useState } from "react";
 
 export default function App() {
   const [name, setName] = useState("");
